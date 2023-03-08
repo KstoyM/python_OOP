@@ -1,4 +1,4 @@
-from project.pokemon import Pokemon
+from to_do_list.pokemon import Pokemon
 from typing import List
 
 
