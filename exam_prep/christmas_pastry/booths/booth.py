@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from project.delicacies.delicacy import Delicacy
+from christmas_pastry.delicacies.delicacy import Delicacy
 
 
 class Booth(ABC):
@@ -16,3 +16,13 @@ class Booth(ABC):
     @abstractmethod
     def reserve(self, number_of_people: int):
         ...
+
+    @property
+    def capacity(self):
+        return self.__capacity
+
+    @capacity.setter
+    def capacity(self, value):
+        if value < 0:
+            raise ValueError("Capacity cannot be a negative number!")
+        self.__capacity = value

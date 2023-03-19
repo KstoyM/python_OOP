@@ -1,11 +1,11 @@
 from typing import List
 
-from project.booths.booth import Booth
-from project.booths.open_booth import OpenBooth
-from project.booths.private_booth import PrivateBooth
-from project.delicacies.delicacy import Delicacy
-from project.delicacies.gingerbread import Gingerbread
-from project.delicacies.stolen import Stolen
+from christmas_pastry.booths.booth import Booth
+from christmas_pastry.booths.open_booth import OpenBooth
+from christmas_pastry.booths.private_booth import PrivateBooth
+from christmas_pastry.delicacies.delicacy import Delicacy
+from christmas_pastry.delicacies.gingerbread import Gingerbread
+from christmas_pastry.delicacies.stolen import Stolen
 
 
 class ChristmasPastryShopApp:
@@ -48,12 +48,12 @@ class ChristmasPastryShopApp:
             return f"Added booth number {booth_number} in the pastry shop."
 
     def reserve_booth(self, number_of_people):
-        if not any(filter(lambda x: x.capacity >= number_of_people, self.booths)):
-            raise Exception(f"No available booth for {number_of_people} people!")
-        else:
-            booth = next(filter(lambda x: x.capacity >= number_of_people, self.booths))
-            booth.reserve(number_of_people)
-            return f"Booth {booth.booth_number} has been reserved for {number_of_people} people."
+        for booth in self.booths:
+            if booth.capacity >= number_of_people and not booth.is_reserved:
+                booth.reserve(number_of_people)
+                return f"Booth {booth.booth_number} has been reserved for {number_of_people} people."
+
+        raise Exception(f"No available booth for {number_of_people} people!")
 
     def order_delicacy(self, booth_number, delicacy_name):
         if not any(filter(lambda x: x.booth_number == booth_number, self.booths)):

@@ -1,4 +1,4 @@
-from project.delicacies.delicacy import Delicacy
+from christmas_pastry.delicacies.delicacy import Delicacy
 
 
 class Stolen(Delicacy):
@@ -8,4 +8,4 @@ class Stolen(Delicacy):
         super().__init__(name, self.PORTION, price)
 
     def details(self):
-        return f"Stolen {self.name}: 250g - {self.price}lv."
+        return f"Stolen {self.name}: 250g - {self.price:.2f}lv."
