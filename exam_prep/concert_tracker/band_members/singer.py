@@ -1,9 +1,8 @@
-from project.band_members.musician import Musician
+from concert_tracker.band_members.musician import Musician
 
 
-class Drummer(Musician):
-    available_skills = ["play the drums with drumsticks",
-                        "play the drums with drum brushes", "read sheet music"]
+class Singer(Musician):
+    available_skills = ["sing high pitch notes", "sing low pitch notes"]
 
     def learn_new_skill(self, new_skill: str):
         if new_skill not in self.available_skills:

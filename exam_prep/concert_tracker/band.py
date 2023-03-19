@@ -1,6 +1,6 @@
 from typing import List
 
-from project.band_members.musician import Musician
+from concert_tracker.band_members.musician import Musician
 
 
 class Band:

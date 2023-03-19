@@ -1,11 +1,11 @@
 from typing import List
 
-from project.band import Band
-from project.band_members.drummer import Drummer
-from project.band_members.guitarist import Guitarist
-from project.band_members.musician import Musician
-from project.band_members.singer import Singer
-from project.concert import Concert
+from concert_tracker.band import Band
+from concert_tracker.band_members.drummer import Drummer
+from concert_tracker.band_members.guitarist import Guitarist
+from concert_tracker.band_members.musician import Musician
+from concert_tracker.band_members.singer import Singer
+from concert_tracker.concert import Concert
 
 
 class ConcertTrackerApp:
