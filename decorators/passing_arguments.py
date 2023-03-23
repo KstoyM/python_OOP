@@ -11,4 +11,9 @@ def repeat(n):
 
 @repeat(4)
 def say_hi():
-    return 'Hello'
+    print('Hello')
+
+
+say_hi()
+
+
