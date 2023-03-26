@@ -1,10 +1,10 @@
 from typing import List
 
-from project.client import Client
-from project.meals.dessert import Dessert
-from project.meals.main_dish import MainDish
-from project.meals.meal import Meal
-from project.meals.starter import Starter
+from horse_racings.client import Client
+from horse_racings.meals.dessert import Dessert
+from horse_racings.meals.main_dish import MainDish
+from horse_racings.meals.meal import Meal
+from horse_racings.meals.starter import Starter
 
 
 class FoodOrdersApp:

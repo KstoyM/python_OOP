@@ -1,8 +1,8 @@
 from typing import List
 
-from project.computer_types.computer import Computer
-from project.computer_types.desktop_computer import DesktopComputer
-from project.computer_types.laptop import Laptop
+from horse_racings.computer_types.computer import Computer
+from horse_racings.computer_types.desktop_computer import DesktopComputer
+from horse_racings.computer_types.laptop import Laptop
 
 
 class ComputerStoreApp:
