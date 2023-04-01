@@ -1,4 +1,4 @@
-from project.movie_specification.movie import Movie
+from movie_app.movie_specification.movie import Movie
 
 
 class Action(Movie):

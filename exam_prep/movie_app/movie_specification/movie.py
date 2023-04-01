@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from project.user import User
+from movie_app.user import User
 
 
 class Movie(ABC):

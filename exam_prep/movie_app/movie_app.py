@@ -1,7 +1,7 @@
 from typing import List
 
-from project.movie_specification.movie import Movie
-from project.user import User
+from movie_app.movie_specification.movie import Movie
+from movie_app.user import User
 
 
 class MovieApp:

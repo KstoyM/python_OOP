@@ -4,15 +4,10 @@ class Person:
         self.age = age
 
 
-lst = [Person('Ivan', 25), Person('Gosho', 30)]
 
-# max_age = 0
-# winner = None
-# for person in lst:
-#     if person.age > max_age:
-#         max_age = person.age
-#         winner = person
+ivan = Person('Ivan', 25)
 
-winner = sorted(lst, key= lambda x: x.age)[0]
+lst = [ivan, Person('Gosho', 30)]
 
-print(winner.name)
+if ivan in lst:
+    print('Yes')

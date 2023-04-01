@@ -1,9 +1,9 @@
-from project.movie_specification.movie import Movie
+from movie_app.movie_specification.movie import Movie
 
 
-class Thriller(Movie):
+class Fantasy(Movie):
 
-    def __init__(self, title, year, owner, age_restriction=16):
+    def __init__(self, title, year, owner, age_restriction=6):
         super().__init__(title, year, owner, age_restriction)
 
     @property
@@ -16,6 +16,6 @@ class Thriller(Movie):
 
     @age_restriction.setter
     def age_restriction(self, value):
-        if value < 16:
-            raise ValueError("Thriller movies must be restricted for audience under 16 years!")
+        if value < 6:
+            raise ValueError("Fantasy movies must be restricted for audience under 6 years!")
         self.__age_restriction = value

@@ -9,6 +9,10 @@ from christmas_pastry.delicacies.stolen import Stolen
 
 
 class ChristmasPastryShopApp:
+    VALID_DELICACIES = {
+        'Gingerbread': Gingerbread,
+        'Stolen': Stolen
+    }
 
     def __init__(self):
         self.booths: List[Booth] = []
@@ -20,14 +24,10 @@ class ChristmasPastryShopApp:
             raise Exception(f"{name} already exists!")
         if type_delicacy not in ['Gingerbread', 'Stolen']:
             raise Exception(f"{type_delicacy} is not on our delicacy menu!")
-        if type_delicacy == 'Gingerbread':
-            delicacy = Gingerbread(name, price)
-            self.delicacies.append(delicacy)
-            return f"Added delicacy {name} - {type_delicacy} to the pastry shop."
-        elif type_delicacy == 'Stolen':
-            delicacy = Stolen(name, price)
-            self.delicacies.append(delicacy)
-            return f"Added delicacy {name} - {type_delicacy} to the pastry shop."
+
+        delicacy = self.VALID_DELICACIES[type_delicacy](name, price)
+        self.delicacies.append(delicacy)
+        return f"Added delicacy {name} - {type_delicacy} to the pastry shop."
 
     def find_booth_by_number(self, booth_number):
         booth = next(filter(lambda x: x.booth_number == booth_number, self.booths))
