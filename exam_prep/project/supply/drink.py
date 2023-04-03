@@ -1,4 +1,4 @@
-from project.supply.supply import Supply
+from project_truck_driver.supply.supply import Supply
 
 
 class Drink(Supply):

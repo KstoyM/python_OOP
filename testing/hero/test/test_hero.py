@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from project.hero import Hero
+from project_truck_driver.hero import Hero
 
 
 class HeroTest(TestCase):

@@ -1,13 +1,7 @@
-class Person:
-    def __init__(self,  name, age):
-        self.name = name
-        self.age = age
+# self.available_cargos, key=self.available_cargos.get
 
+available_cargos = {'Varna': 10, 'Sofia': 15, 'Ruse': 50}
 
+best_location = min(available_cargos, key=available_cargos.get)
 
-ivan = Person('Ivan', 25)
-
-lst = [ivan, Person('Gosho', 30)]
-
-if ivan in lst:
-    print('Yes')
+print(best_location)

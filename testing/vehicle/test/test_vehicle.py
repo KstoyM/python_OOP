@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from project.vehicle import Vehicle
+from project_truck_driver.vehicle import Vehicle
 
 
 class TestVehicle(TestCase):

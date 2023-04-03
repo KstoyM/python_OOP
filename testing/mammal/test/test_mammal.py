@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from project.mammal import Mammal
+from project_truck_driver.mammal import Mammal
 
 
 class TestMammal(TestCase):
