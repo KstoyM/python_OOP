@@ -1,4 +1,4 @@
-from project.shopping_cart import ShoppingCart
+from project_shopping_list.shopping_cart import ShoppingCart
 from unittest import TestCase, main
 
 
