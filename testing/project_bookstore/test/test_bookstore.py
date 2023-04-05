@@ -26,6 +26,8 @@ class TestBookstore(TestCase):
         self.assertEqual(3, len(self.bookstore))
         self.bookstore.sell_book('Inferno', 1)
         self.assertEqual(2, len(self.bookstore))
+        self.bookstore.sell_book('Inferno', 2)
+        self.assertEqual(0, len(self.bookstore))
 
     def test_receive_book_raises_exception(self):
         with self.assertRaises(Exception) as ex:
@@ -40,6 +42,7 @@ class TestBookstore(TestCase):
         self.assertEqual(len(self.bookstore), 4)
         result2 = self.bookstore.receive_book('Inferno', 1)
         self.assertEqual(str(result2), '5 copies of Inferno are available in the bookstore.')
+        self.assertEqual(len(self.bookstore), 5)
 
     def test_sell_book_raises_exception(self):
         with self.assertRaises(Exception) as ex:
