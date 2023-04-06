@@ -1,4 +1,4 @@
-from project_truck_driver.supply.supply import Supply
+from project_war_game.supply.supply import Supply
 
 
 class Food(Supply):

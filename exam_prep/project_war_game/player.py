@@ -1,3 +1,6 @@
+from project_war_game.supply.supply import Supply
+
+
 class Player:
     player_names = []
 
@@ -5,7 +8,10 @@ class Player:
         self.name = name
         self.age = age
         self.stamina = stamina
-        self.need_sustenance = False if self.stamina == 100 else True
+
+    @property
+    def need_sustenance(self):
+        return self.__stamina < 100
 
     @property
     def name(self):
@@ -39,6 +45,12 @@ class Player:
         if value > 100 or value < 0:
             raise ValueError("Stamina not valid!")
         self.__stamina = value
+
+    def _sustain_player(self, supply: Supply):
+        if self.stamina + supply.energy > 100:
+            self.stamina = 100
+        else:
+            self.stamina += supply.energy
 
     def __str__(self):
         return f"Player: {self.name}, {self.age}, {self.stamina}, {self.need_sustenance}"

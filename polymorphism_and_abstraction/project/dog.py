@@ -1,4 +1,4 @@
-from project.animal import Animal
+from project_war_game.animal import Animal
 
 
 class Dog(Animal):

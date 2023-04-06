@@ -1,4 +1,4 @@
-from project.team import Team
+from project_war_game.team import Team
 
 from unittest import TestCase, main
 
