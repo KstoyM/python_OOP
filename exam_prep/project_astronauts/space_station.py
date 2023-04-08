@@ -1,12 +1,12 @@
 from typing import List
 
-from project.astronaut.astronaut import Astronaut
-from project.astronaut.astronaut_repository import AstronautRepository
-from project.astronaut.biologist import Biologist
-from project.astronaut.geodesist import Geodesist
-from project.astronaut.meteorologist import Meteorologist
-from project.planet.planet import Planet
-from project.planet.planet_repository import PlanetRepository
+from project_astronauts.astronaut.astronaut import Astronaut
+from project_astronauts.astronaut.astronaut_repository import AstronautRepository
+from project_astronauts.astronaut.biologist import Biologist
+from project_astronauts.astronaut.geodesist import Geodesist
+from project_astronauts.astronaut.meteorologist import Meteorologist
+from project_astronauts.planet.planet import Planet
+from project_astronauts.planet.planet_repository import PlanetRepository
 
 
 class SpaceStation:

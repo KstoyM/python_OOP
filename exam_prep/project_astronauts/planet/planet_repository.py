@@ -1,4 +1,4 @@
-from project.planet.planet import Planet
+from project_astronauts.planet.planet import Planet
 
 
 class PlanetRepository:

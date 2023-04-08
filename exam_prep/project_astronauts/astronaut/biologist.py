@@ -1,4 +1,4 @@
-from project.astronaut.astronaut import Astronaut
+from project_astronauts.astronaut.astronaut import Astronaut
 
 
 class Biologist(Astronaut):
