@@ -1,16 +1,42 @@
-from project.baked_food.bread import Bread
-from project.bakery import Bakery
-from project.drink.tea import Tea
-from project.table.inside_table import InsideTable
-from project.table.table import Table
+from project.robots.female_robot import FemaleRobot
+from project.robots.male_robot import MaleRobot
+from project.robots_managing_app import RobotsManagingApp
+from project.services.main_service import MainService
+from project_bakery.baked_food.bread import Bread
+from project_bakery.bakery import Bakery
+from project_bakery.drink.tea import Tea
+from project_bakery.table.inside_table import InsideTable
+from project_bakery.table.table import Table
 
 
-bakery = Bakery('Ivan')
-print(bakery.add_food('Bread', 'bread', 5))
-print(bakery.add_food('Cake', 'cake', 5))
-print(bakery.add_drink('Tea', 'tea', 5, 'green'))
-print(bakery.add_drink('Water', 'devin', 15, 'low'))
-print(bakery.add_table('InsideTable', 34, 15))
-print(bakery.order_food(34, 'bread', 'cake', 'sofa'))
+# robot = FemaleRobot('Joro', 'Green', 10)
+# robot2 = MaleRobot('Joro', 'Green', 10)
+# robot.eating()
+# robot2.eating()
+# print(robot.weight)
+# print(robot2.weight)
+# robot2 = FemaleRobot('Ivan', 'Green', 10)
+# service = MainService('Service')
+# service.robots.append(robot)
+# service.robots.append(robot2)
+# print(service.details())
+service = MainService('Name')
+service.capacity -= 29
 
-# print(bakery.food_menu[0])
+print(service.capacity)
+
+print(service.capacity)
+main_app = RobotsManagingApp()
+print(main_app.add_service('SecondaryService', 'ServiceRobotsWorld'))
+# print(main_app.add_service('MainService', 'ServiceTechnicalsWorld'))
+print(main_app.add_robot('FemaleRobot', 'Scrap', 'HouseholdRobots', 321.26))
+print(main_app.add_robot('FemaleRobot', 'Sparkle', 'FunnyRobots', 211.11))
+print(main_app.add_robot('FemaleRobot', 'Spare', 'FunnyRobots', 211.11))
+print(main_app.add_robot('FemaleRobot', 'Sparle', 'FunnyRobots', 211.11))
+
+print(main_app.add_robot_to_service('Scrap', 'ServiceRobotsWorld'))
+print(main_app.add_robot_to_service('Sparkle', 'ServiceRobotsWorld'))
+
+print(main_app.services[0].capacity)
+print(main_app.remove_robot_from_service('Scrap','ServiceRobotsWorld'))
+print(main_app.services[0].capacity)
