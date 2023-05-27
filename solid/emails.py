@@ -19,7 +19,7 @@ class MyContent(IContent):
 class HTMLContent(IContent):
 
     def format(self):
-        return '\n'.join(['<html>', self.text, '</html>'])
+        return '\n'.join(['<html_and_css>', self.text, '</html_and_css>'])
 
 
 class IEmail(ABC):
